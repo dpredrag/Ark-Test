@@ -9,7 +9,7 @@
     "url": "https://github.com/aol/moloch.git"
   },
   "dependencies": {
-    "async": "^2.0.1",
+    "async": "^3.2.2",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "compression": "^1.6.2",
