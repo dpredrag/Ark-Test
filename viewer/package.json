@@ -13,23 +13,24 @@
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "compression": "^1.6.2",
-    "elasticsearch": "^11.0.1",
+    "elasticsearch": "^12.0.0",
     "express": "^4.14.0",
     "font-awesome": "^4.6.3",
     "fs-ext": "^0.5.0",
     "iniparser": "http://github.com/awick/node-iniparser/tarball/master",
     "jade": "^1.11.0",
-    "pug": "2.0.0-beta6",
+    "pug": "3.0.1",
     "method-override": "^2.3.6",
     "moment": "^2.15.1",
     "morgan": "^1.7.0",
     "multer": "^1.2.0",
-    "passport": "^0.3.2",
+    "passport": "^0.6.0",
     "passport-http": "^0.3.0",
     "peek-stream": "^1.1.1",
     "serve-favicon": "^2.3.0",
     "stylus": "^0.54.5",
-    "through2": "^2.0.1"
+    "through2": "^2.0.1",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "node viewer.js -c ../config.ini",
@@ -45,7 +46,9 @@
     "test": "karma start --single-run",
     "test:watch": "karma start --auto-watch",
     "pretest": "npm run lint",
-    "pretest:watch": "npm run lint"
+    "pretest:watch": "npm run lint",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "angular": "^1.5.8",
@@ -81,5 +84,6 @@
   },
   "optionalDependencies": {
     "png": "http://github.com/awick/node-png/tarball/master"
-  }
+  },
+  "snyk": true
 }
